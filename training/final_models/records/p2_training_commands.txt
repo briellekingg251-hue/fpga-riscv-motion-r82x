@@ -1,0 +1,26 @@
+#!/bin/bash
+# Final: COCO 140ep (limbs2) -> OV5640 ft 15ep -> pow2u export + verify -> INT8 OV eval -> stream plan.
+# usage: run_final.sh GPU NAME CFG POSE_IN
+# Set PROJECT_DIR and PRECROP_DIR to the project and prepared data locations.
+: "${PROJECT_DIR:?Set PROJECT_DIR}"
+: "${PRECROP_DIR:?Set PRECROP_DIR}"
+export COCO_DIR="$PROJECT_DIR/data/coco" COCO_CACHE="$PROJECT_DIR/cache"
+GPU=$1 NAME=$2 CFG=$3; export POSE_IN=$4
+cd "${PROJECT_DIR}"
+mkdir -p results
+NEW="body_20261003_200751_251287 body_20261003_201325_425012 body_20261003_201747_114879 body_20261003_202301_327304"
+CUDA_VISIBLE_DEVICES=$GPU python -u src/train_gpu.py --name ${NAME} --cfg $CFG $XTRA --source ${PRECROP_DIR}/coco_train \
+   --epochs 140 --kp-weight limbs2 --eval-every 10 --loader-threads 8 || exit 1
+SRCS="--source ${PRECROP_DIR}/coco_train|1|0.2"
+for s in ${PRECROP_DIR}/ov_*.npy; do SRCS="$SRCS --source ${s%.npy}|3"; done
+CUDA_VISIBLE_DEVICES=$GPU python -u src/train_gpu.py --name ${NAME}_ft --cfg $CFG --resume runs/${NAME}/best.pt $SRCS $XTRA \
+   --epochs 15 --lr 1e-3 --kp-weight limbs2 --eval-every 5 || exit 1
+cd src
+CUDA_VISIBLE_DEVICES=$GPU python export.py --pose ../runs/${NAME}_ft/last.pt --mode pow2u
+E=../runs/${NAME}_ft/export_pow2u
+python verify_export.py $E
+python plan_stream_chained.py $E --clock 100e6 --fps 30
+python plan_stream_chained.py $E --clock 100e6 --fps 100
+CUDA_VISIBLE_DEVICES=$GPU python eval_ov.py --frames-root ${PROJECT_DIR}/frames --tests $NEW \
+   --det ../runs/d1_ov_teacher/export_pow2u --pose ${NAME}_int8=$E --pose ${NAME}_float=../runs/${NAME}_ft/last.pt \
+   --out ../results/ov_eval_final_${NAME}.json

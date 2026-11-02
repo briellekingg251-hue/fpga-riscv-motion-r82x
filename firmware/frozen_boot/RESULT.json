@@ -1,0 +1,30 @@
+{
+  "status": "BOOT_ROM_NES_PASS",
+  "CPU_Hz": 157500000,
+  "source_build": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\build_run03",
+  "source_program_hex_sha256": "bfeda868a88cb01778761663ae1fbf91555bc9d597f8f143565609570705dfa7",
+  "replay_identical": true,
+  "loader_bytes": 24096,
+  "loader_limit": 24576,
+  "patches": [
+    {
+      "file": "fw/control.h",
+      "old": "#define CONTROL_GAME_VIEW 0x50564945u\n",
+      "new": "#define CONTROL_GAME_VIEW 0x50564945u\n#define CONTROL_GAME_NES 0x4e455331u\n"
+    },
+    {
+      "file": "fw/control.h",
+      "old": "    if(id==CONTROL_GAME_PAL || id==CONTROL_GAME_DOOM || id==CONTROL_GAME_SLUG)return CONTROL_CAP_TOUCH;",
+      "new": "    if(id==CONTROL_GAME_PAL || id==CONTROL_GAME_DOOM || id==CONTROL_GAME_SLUG ||\n       id==CONTROL_GAME_NES)return CONTROL_CAP_TOUCH;"
+    },
+    {
+      "file": "fw/boot.c",
+      "old": "id==CONTROL_GAME_SLUG || id==CONTROL_GAME_VIEW)));",
+      "new": "id==CONTROL_GAME_SLUG || id==CONTROL_GAME_VIEW ||\n                            id==CONTROL_GAME_NES)));"
+    }
+  ],
+  "program_hex": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\boot_nes_157_run01\\nes\\program.hex",
+  "program_hex_sha256": "668cbfc4fa5312bfd981c059e56e3c63d24c2120294b273d9fdbfa543e05d25b",
+  "tool_sha256": "f3cfab2f2a484a3335bab751a6b87d934db6ca2793e39563dcb70c14dda02b2e",
+  "nes_tool_sha256": "a7b54adb82f43a61146ecce72b90ee24e37aeca482d3de77ace9087f82ddf354"
+}

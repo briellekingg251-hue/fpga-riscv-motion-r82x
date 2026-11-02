@@ -1,0 +1,64 @@
+{
+  "status": "BUILT_NOT_DEPLOYED",
+  "CPU_Hz": 157500000,
+  "resident_ROM_changed": false,
+  "shared_game_bin": false,
+  "games": {
+    "FRUIT": {
+      "TOUCH": {
+        "bytes": 29752,
+        "sha256": "a58b6db1efca36d2fc602e9b4955dc18cdb016e9bd69f71bf51e9bfe06ddd65b",
+        "AI_service_compiled": false,
+        "debug_UART": false
+      },
+      "POSE": {
+        "bytes": 46712,
+        "sha256": "7f473d6b57ae153bf7afe2dc9e6df40db7ab1994c3405d5ab527411226b2ba26",
+        "AI_service_compiled": true,
+        "debug_UART": true
+      }
+    },
+    "SUBWAY": {
+      "TOUCH": {
+        "bytes": 32380,
+        "sha256": "36a318ee1a2077e61209d31362b749fc602bd308efaa9c89db857262ca65afc3",
+        "AI_service_compiled": false,
+        "debug_UART": false
+      },
+      "POSE": {
+        "bytes": 49964,
+        "sha256": "3c0c1ec7f72a314f38ae9a7f602569b90f964a4d353c5274251f41c6263e71e1",
+        "AI_service_compiled": true,
+        "debug_UART": true
+      }
+    }
+  },
+  "source_sha256": {
+    "main.c": "ea6d54bc726083fcd18a7fd2cdaa197104ee990f6059dc783318adc8cfbf1fa8",
+    "pose_blade_visual.c": "5a56a7e290122603a09086c03cc66858f5cd9e4d9c565e57c3e53b12b9dc88ee",
+    "pose_ui.c": "27c050453914df9612356e4dc6c6741cec2d7395652185aa37570611f4dc60d3",
+    "game_pose_service.c": "92d20fe0f13b67292ebb31dee55551dfa01d652cca795824c3dfd96cd56e8985",
+    "pose_service.c": "b36279bcfe5208e6317d5956a2ef347c0916825da0f80d5f83fbd18a0dc18802",
+    "pose_mmio_source.c": "060f22e1dafd4a491d93b18738ab955e29f544d11750a58994313f78c1600a7f",
+    "p2_algo.c": "27b3f78a694fcc06f547e2cf6c10b0ab0d081e2287bcce3a1441ec04ff712554",
+    "pose_input.c": "c6046baa06116965c155f3001d960aad8155a140f5dd9de1d7f8650305711fe2",
+    "game_runtime.c": "734149988fb3ced9619a79bbd2db3e2754cdfea15b95da0fa93553151bc1232a",
+    "start.S": "1aa65c10b08626813c3627d2da1dbc70fd35976904113da9c4af94416dd1274b",
+    "jump.S": "ddf5b2b1e1d15742dc51f1d5387862edbbe41955ff341c651406508d4f326695",
+    "gpu.c": "b839bc594ecc438f1182b6706b05beabafa984cdbecdc3d4b54891c698ce6cc3",
+    "uart.c": "5e782a391fa188ae85b6f71eb43d32c97e5fcfa85a64cfa4455825953204a5e4",
+    "game_record.c": "70dae0cc748349bd4e1a3661af31aa0c5fc29c37e40f7f5c4c4df52ac5ce31ed",
+    "fat32.c": "cdc13c883477b1766d0787e40c267db5cd17f4c3cf2b39dcbf53a6971527c057",
+    "sd_spi.c": "ecc6b44cad5a1a9169d0c8959629d278513bd662099dbb8ed3efd950f10d32fb",
+    "game_link.ld": "e2e01f47307d2c2bea2fcce5e78ce7ab1567e63ff07b44af41ceed06d508e890",
+    "soc.h": "247439877cbc14c78110feddb0d203e452b6d5e2df23ae22089bc15fdb422400",
+    "game_control.h": "0c991be0c91b8371fa28f27727440b3d794d1339325f961fcee575c2eed0932e",
+    "variant_start.S": "c11f971442104277df688938986ef927ac0f7a88ab25b6c36348fa04e9ad4ca4",
+    "variant_dispatch.c": "5a7d428cfcecb9b40f831e9047f5f5666fd0bd90659c256972686f2514d75101",
+    "uartlink.c": "7a9c0628dd523bd9b414806a531273d1b5f3deb602dbc5cfb9c772218c8afaa7",
+    "variant_link.ld": "1a75e4447e43156fe661f52caca237be038e1bb28e52dc2b327ab49a8e6a4af3",
+    "subway_main.c": "f4ea36479e1d7e60a9c10bcae04c9b1a51f1aefe78eb393004447eec2e4b8d61",
+    "subway.c": "15f8c01c090977dfd7b522565e47a89d0afc6a905839652d6325c7e1cf56be57",
+    "subway_draw.c": "e6b0dedd30401bc467599ee42fbf197951c768805bb1209d07de2f00b53aed10"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "status": "PASS_STATIC_R50_OVERLAY",
+  "mapped_pcf": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\physical_production_r49_o2_s2\\device_map\\fn_top.pcf",
+  "mapped_pcf_sha256": "b9f5c82b6e1d8a6031c95261dcef09e732cb5b123157119e386aa1db185d7d29",
+  "macro_generator_sha256": "cebcdb41534bec2d319809ed0f9485fea439e5124b0b993fc1702c907391df82",
+  "routed_templates": {
+    "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\physical_production_r49_o2_s2\\apm_site_audit\\placed_group.pcf": "e80b0bdc2f5dc03bad458ca6551f58b6728f4a124356382c417545d4d82be3b3",
+    "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\physical_production_r49_o2_s2\\apm_site_audit\\placed_prim.pcf": "11ac8d8be463b66633f13c24d7421861c54468ef13170c97c35a4630a359c7e3"
+  },
+  "tool_sha256": "8677429ca2d484666bbd300f3ba737570db6c9d11397d095180d143d471dd775",
+  "overlay": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\hardware\\production_r50_o2_view30\\site_overlay.pcf",
+  "overlay_sha256": "b95c66e58baaf79795c571d15f8fa75a72cea8cbea11926d8dfdb0650a313c54",
+  "pinned_platform_macros": 910,
+  "pinned_CDC_registers": 316,
+  "pinned_total": 1226,
+  "post_view_APM": {
+    "from": "APM_461_336 XAPM_CORE_D",
+    "to": "APM_587_30 XAPM_CORE_D"
+  },
+  "CDC_groups": {
+    "det_drop": {
+      "carry_members": 31,
+      "carry_centroid": [
+        555,
+        813
+      ],
+      "gray_LUT_sites": [
+        "CLMA_555_816",
+        "CLMA_555_810",
+        "CLMA_555_822",
+        "CLMA_561_816"
+      ],
+      "g1_sites": [
+        "CLMA_555_804",
+        "CLMA_561_810",
+        "CLMA_567_811",
+        "CLMA_543_816",
+        "CLMA_555_828",
+        "CLMA_561_822",
+        "CLMA_567_816",
+        "CLMA_543_810"
+      ],
+      "max_manhattan_from_centroid": 15
+    },
+    "pose_drop": {
+      "carry_members": 31,
+      "carry_centroid": [
+        495,
+        762
+      ],
+      "gray_LUT_sites": [
+        "CLMA_495_768",
+        "CLMA_495_756",
+        "CLMA_501_757",
+        "CLMA_495_774"
+      ],
+      "g1_sites": [
+        "CLMA_501_768",
+        "CLMA_495_750",
+        "CLMA_501_756",
+        "CLMA_501_769",
+        "CLMA_483_757",
+        "CLMA_501_751",
+        "CLMA_483_768",
+        "CLMA_495_780"
+      ],
+      "max_manhattan_from_centroid": 18
+    },
+    "captured": {
+      "carry_members": 31,
+      "carry_centroid": [
+        717,
+        638
+      ],
+      "gray_LUT_sites": [
+        "CLMA_675_637",
+        "CLMA_675_636",
+        "CLMA_675_642",
+        "CLMA_675_643"
+      ],
+      "g1_sites": [
+        "CLMA_675_631",
+        "CLMA_669_636",
+        "CLMA_675_630",
+        "CLMA_669_642",
+        "CLMA_675_648",
+        "CLMA_675_649",
+        "CLMA_663_637",
+        "CLMA_675_625"
+      ],
+      "max_manhattan_from_centroid": 55
+    },
+    "clock": {
+      "carry_members": 31,
+      "carry_centroid": [
+        399,
+        663
+      ],
+      "gray_LUT_sites": [
+        "CLMA_399_666",
+        "CLMA_399_660",
+        "CLMA_393_666",
+        "CLMA_399_672"
+      ],
+      "g1_sites": [
+        "CLMA_405_666",
+        "CLMA_393_660",
+        "CLMA_399_654",
+        "CLMA_405_660",
+        "CLMA_387_661",
+        "CLMA_387_666",
+        "CLMA_393_672",
+        "CLMA_399_678"
+      ],
+      "max_manhattan_from_centroid": 15
+    }
+  }
+}

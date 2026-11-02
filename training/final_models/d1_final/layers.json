@@ -1,0 +1,316 @@
+{
+ "kind": "det",
+ "mode": "pow2u",
+ "input": {
+  "h": 96,
+  "w": 160,
+  "order": "RGB, row-major, pixel uint8",
+  "quant": "q = pixel (uint8)"
+ },
+ "stride": 16,
+ "params": 217328,
+ "total_mac": 37067520,
+ "layers": [
+  {
+   "index": 0,
+   "type": "conv3x3",
+   "src": -1,
+   "cin": 3,
+   "cout": 16,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 2,
+   "pad": 1,
+   "in_hw": [
+    96,
+    160
+   ],
+   "out_hw": [
+    48,
+    80
+   ],
+   "act": "relu",
+   "mac": 1658880,
+   "in_exp": -7,
+   "w_exp": -6,
+   "out_exp": -4,
+   "shift": 9,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 1,
+   "type": "conv3x3",
+   "src": 0,
+   "cin": 16,
+   "cout": 32,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 2,
+   "pad": 1,
+   "in_hw": [
+    48,
+    80
+   ],
+   "out_hw": [
+    24,
+    40
+   ],
+   "act": "relu",
+   "mac": 4423680,
+   "in_exp": -4,
+   "w_exp": -7,
+   "out_exp": -4,
+   "shift": 7,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 2,
+   "type": "conv3x3",
+   "src": 1,
+   "cin": 32,
+   "cout": 32,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 1,
+   "pad": 1,
+   "in_hw": [
+    24,
+    40
+   ],
+   "out_hw": [
+    24,
+    40
+   ],
+   "act": "relu",
+   "mac": 8847360,
+   "in_exp": -4,
+   "w_exp": -7,
+   "out_exp": -5,
+   "shift": 6,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 3,
+   "type": "conv3x3",
+   "src": 2,
+   "cin": 32,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 2,
+   "pad": 1,
+   "in_hw": [
+    24,
+    40
+   ],
+   "out_hw": [
+    12,
+    20
+   ],
+   "act": "relu",
+   "mac": 4423680,
+   "in_exp": -5,
+   "w_exp": -7,
+   "out_exp": -5,
+   "shift": 7,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 4,
+   "type": "conv3x3",
+   "src": 3,
+   "cin": 64,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 1,
+   "pad": 1,
+   "in_hw": [
+    12,
+    20
+   ],
+   "out_hw": [
+    12,
+    20
+   ],
+   "act": "relu",
+   "mac": 8847360,
+   "in_exp": -5,
+   "w_exp": -8,
+   "out_exp": -5,
+   "shift": 8,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 5,
+   "type": "conv3x3",
+   "src": 4,
+   "cin": 64,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 2,
+   "pad": 1,
+   "in_hw": [
+    12,
+    20
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": "relu",
+   "mac": 2211840,
+   "in_exp": -5,
+   "w_exp": -7,
+   "out_exp": -5,
+   "shift": 7,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 6,
+   "type": "conv3x3",
+   "src": 5,
+   "cin": 64,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 1,
+   "pad": 1,
+   "in_hw": [
+    6,
+    10
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": "relu",
+   "mac": 2211840,
+   "in_exp": -5,
+   "w_exp": -8,
+   "out_exp": -5,
+   "shift": 8,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 7,
+   "type": "conv3x3",
+   "src": 6,
+   "cin": 64,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 1,
+   "pad": 1,
+   "in_hw": [
+    6,
+    10
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": "relu",
+   "mac": 2211840,
+   "in_exp": -5,
+   "w_exp": -7,
+   "out_exp": -5,
+   "shift": 7,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 8,
+   "type": "conv3x3",
+   "src": 7,
+   "cin": 64,
+   "cout": 64,
+   "groups": 1,
+   "kernel": 3,
+   "stride": 1,
+   "pad": 1,
+   "in_hw": [
+    6,
+    10
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": "relu",
+   "mac": 2211840,
+   "in_exp": -5,
+   "w_exp": -7,
+   "out_exp": -5,
+   "shift": 7,
+   "out_bits": 8,
+   "out_signed": false
+  },
+  {
+   "index": 9,
+   "type": "heat",
+   "src": 8,
+   "cin": 64,
+   "cout": 1,
+   "groups": 1,
+   "kernel": 1,
+   "stride": 1,
+   "pad": 0,
+   "in_hw": [
+    6,
+    10
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": null,
+   "mac": 3840,
+   "in_exp": -5,
+   "w_exp": -7,
+   "out_exp": -3,
+   "shift": 9,
+   "out_bits": 8,
+   "out_signed": true
+  },
+  {
+   "index": 10,
+   "type": "box",
+   "src": 8,
+   "cin": 64,
+   "cout": 4,
+   "groups": 1,
+   "kernel": 1,
+   "stride": 1,
+   "pad": 0,
+   "in_hw": [
+    6,
+    10
+   ],
+   "out_hw": [
+    6,
+    10
+   ],
+   "act": null,
+   "mac": 15360,
+   "in_exp": -5,
+   "w_exp": -6,
+   "out_exp": -3,
+   "shift": 8,
+   "out_bits": 8,
+   "out_signed": true
+  }
+ ],
+ "heads": {
+  "heat": "layer 9: 1 ch person-centre logit",
+  "box": "layer 10: 4 ch dy, dx (input px from cell centre), log(h), log(w) (input px)"
+ }
+}

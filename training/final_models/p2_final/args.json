@@ -1,0 +1,38 @@
+{
+ "name": "p2f_r96_288_ft",
+ "cfg": "s16_hx_r96",
+ "source": [
+  "/dev/shm/p2/hr/coco_train|1|0.2",
+  "/dev/shm/p2/hr/ov_body_20261003_100609_279433|3",
+  "/dev/shm/p2/hr/ov_body_20261003_140849_819522|3",
+  "/dev/shm/p2/hr/ov_body_20261003_152734_790050|3",
+  "/dev/shm/p2/hr/ov_body_20261003_200751_251287|3",
+  "/dev/shm/p2/hr/ov_body_20261003_201325_425012|3",
+  "/dev/shm/p2/hr/ov_body_20261003_201747_114879|3",
+  "/dev/shm/p2/hr/ov_body_20261003_202301_327304|3"
+ ],
+ "epochs": 15,
+ "batch": 256,
+ "lr": 0.001,
+ "wd": 0.0001,
+ "kp_weight": "limbs2",
+ "max_rot": 30.0,
+ "no_board_aug": false,
+ "eval_every": 5,
+ "resume": "runs/p2f_r96_288/best.pt",
+ "cont": false,
+ "compile": false,
+ "allow_hw_violation": false,
+ "loader_threads": 6,
+ "cpu_threads": 4,
+ "hw": {
+  "cfg": "s16_hx_r96",
+  "stride": 16,
+  "weights": 589104,
+  "drm_weights": 128,
+  "mac": 267494400,
+  "early_mac_share": 0.201,
+  "rf": 239,
+  "errors": []
+ }
+}

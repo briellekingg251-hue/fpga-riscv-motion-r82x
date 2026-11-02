@@ -1,0 +1,69 @@
+{
+  "contract_version": 1,
+  "inference_integrated": true,
+  "continuity_gate_integrated": true,
+  "pose_actions_connected": true,
+  "firmware_pose_runnable": true,
+  "system_pose_runnable": false,
+  "validation": "production action chain with observable single-player continuity; CPU budget/30fps/board acceptance pending",
+  "games": {
+    "FRUIT": {
+      "modes": [
+        "TOUCH",
+        "POSE"
+      ],
+      "shared_game_bin": false,
+      "pose_adapter": true,
+      "resource_abi": 1
+    },
+    "SUBWAY": {
+      "modes": [
+        "TOUCH",
+        "POSE"
+      ],
+      "shared_game_bin": false,
+      "pose_adapter": true,
+      "resource_abi": 2
+    },
+    "PAL": {
+      "modes": [
+        "TOUCH"
+      ],
+      "shared_game_bin": true,
+      "pose_adapter": false,
+      "resource_abi": 3
+    },
+    "DOOM": {
+      "modes": [
+        "TOUCH"
+      ],
+      "resource_abi": 3,
+      "pose_adapter": false,
+      "clock_hz": 157500000,
+      "board_gameplay": "NOT_RUN"
+    },
+    "SLUG": {
+      "modes": [
+        "TOUCH"
+      ],
+      "resource_abi": 3,
+      "pose_adapter": false,
+      "clock_hz": 157500000,
+      "board_gameplay": "NOT_RUN"
+    }
+  },
+  "independent_executables": {
+    "FRUIT": [
+      "TOUCH.BIN",
+      "POSE.BIN"
+    ],
+    "SUBWAY": [
+      "TOUCH.BIN",
+      "POSE.BIN"
+    ],
+    "PAL": [
+      "GAME.BIN"
+    ]
+  },
+  "CPU_Hz": 157500000
+}

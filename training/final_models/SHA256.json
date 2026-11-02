@@ -1,0 +1,15 @@
+{
+  "d1_final/last.pt": "d1bfd9ed1791c23b465530a343aee380b121f099d630eb6053459bc5ba5e5301",
+  "d1_final/layers.json": "3955707659a80cecda5743d7533e7f03e67ce94e5a01c2219f494c43c757e820",
+  "d1_final/params.npz": "b406670293bd60dbf14d7cb4fa5fc50e8ff0e70151c6224f7bbc6d79b5cbfadd",
+  "d1_pretrain/best.pt": "f0c4a63519f1ec423ef3771f378bfa8233be90af8b1e0cd524a7632cfae3f764",
+  "p2_final/args.json": "0575e65331f28e9b7c9ca22c525ee698471ad59ecc7491f11f39cef156208821",
+  "p2_final/last.pt": "2feb73e1d57cf017867b484a38767a19a83a018bc3010018818d67ce7cc72f80",
+  "p2_final/layers.json": "45b6d4ebf3f7af9da413184a06da24912a0cdfc5ba71c64427e2a0be9c2a3be3",
+  "p2_final/params.npz": "979aae05ccabbaac76f680240c6bcb5294e3638ba12971375613232bc2b39bb5",
+  "p2_pretrain/args.json": "c69023f240c77e46e463a485d6ee0386db6a64325d7ee0bcbf18a30d984e9f59",
+  "p2_pretrain/best.pt": "ea372741f4c1e319ef47eb40ea142202ad3dce3273299849ed98b1896e03e227",
+  "records/d1_training_commands.txt": "6dfc806402b101fa0e049f4352867d55124bd346c66cb37e0071a9f6e54cec5d",
+  "records/ov_eval_final_p2f_r96_288.json": "a264a3a3d7829f849869ebd793d78217511a4d957be8318431710d088f9d3d71",
+  "records/p2_training_commands.txt": "7a55bf6fcc3b3c082fb2e44c8595e69dcac0a7125e78d0c20bb7aeca429463ce"
+}

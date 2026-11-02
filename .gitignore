@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+training/data/
+training/frames/
+training/runs/
+training/cache/
+game_data/
+hardware/vendor/

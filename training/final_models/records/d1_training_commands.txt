@@ -1,0 +1,11 @@
+#!/bin/bash
+# D1 fine-tune: same recipe as detV2_D1_newvideo, but OV5640 teacher (YOLOX full-person) boxes, train splits of 7 videos.
+# Set PROJECT_DIR to the project location.
+: "${PROJECT_DIR:?Set PROJECT_DIR}"
+export COCO_DIR="$PROJECT_DIR/data/coco" COCO_CACHE="$PROJECT_DIR/cache"
+cd "${PROJECT_DIR}"
+mkdir -p results
+EX=""
+for j in frames/*_rtm_body12_train.json; do s=$(basename $j _rtm_body12_train.json); EX="$EX --extra ${PROJECT_DIR}/$j|${PROJECT_DIR}/frames/$s|4"; done
+CUDA_VISIBLE_DEVICES=1 python -u src/det.py --name d1_ov_teacher --cfg s16_d1 --resume base/D1_coco_best.pt \
+   --coco-frac 0.2 $EX --epochs 12 --batch 64 --lr 5e-4 --board-aug --workers 8 --cpu-threads 4 --eval-every 3

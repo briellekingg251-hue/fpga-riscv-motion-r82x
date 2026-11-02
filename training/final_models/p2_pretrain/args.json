@@ -1,0 +1,31 @@
+{
+ "name": "p2f_r96_288",
+ "cfg": "s16_hx_r96",
+ "source": [
+  "/dev/shm/p2/hr/coco_train"
+ ],
+ "epochs": 140,
+ "batch": 256,
+ "lr": 0.004,
+ "wd": 0.0001,
+ "kp_weight": "limbs2",
+ "max_rot": 30.0,
+ "no_board_aug": false,
+ "eval_every": 10,
+ "resume": "",
+ "cont": false,
+ "compile": false,
+ "allow_hw_violation": false,
+ "loader_threads": 8,
+ "cpu_threads": 4,
+ "hw": {
+  "cfg": "s16_hx_r96",
+  "stride": 16,
+  "weights": 589104,
+  "drm_weights": 128,
+  "mac": 267494400,
+  "early_mac_share": 0.201,
+  "rf": 239,
+  "errors": []
+ }
+}

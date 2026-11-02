@@ -1,0 +1,598 @@
+{
+  "status": "R74_POSE_GAMES_BUILT_157MHZ",
+  "CPU_Hz": 157500000,
+  "base_card": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\games_157_run01\\sdcard",
+  "tool_sha256": "1d0dd8fb8025f9fe7dd09fe774147dee10f30a318bca5698bcd51b6d5b10af65",
+  "sources": {
+    "FRUIT": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\games_run01\\fw",
+    "SUBWAY": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\games_run03\\fw",
+    "POSEVIEW": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\build_run03"
+  },
+  "patches": {
+    "FRUIT": [
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "box continuity tolerance"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "detector continuity tolerates skipped frames"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "hold ROI through 7 missed detections (standalone LOST_LIMIT 8)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (1/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (2/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "draw decoded pose while the ROI is alive"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track break does not blank the display"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "confirm_track age windows 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "knees optional for tracking (duck still needs them)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track continuity tolerates skipped frames"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "only a lost detection ends the track"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "step age window 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "debug line shows ROI hold count"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "pose_input stale window 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "capture floor accepts the floor frame"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "15.6 fps sample counts"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "fruit blade at 15.6 fps"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary flag in the source"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary service state"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary words readable"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary capability"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary helpers"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read start"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary skips the scan"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector continuity"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector loss window"
+      }
+    ],
+    "SUBWAY": [
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "box continuity tolerance"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "detector continuity tolerates skipped frames"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "hold ROI through 7 missed detections (standalone LOST_LIMIT 8)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (1/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (2/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "draw decoded pose while the ROI is alive"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track break does not blank the display"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "confirm_track age windows 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "knees optional for tracking (duck still needs them)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track continuity tolerates skipped frames"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "only a lost detection ends the track"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "step age window 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "debug line shows ROI hold count"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "pose_input stale window 300 ms"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "subway body without knees (1/2)"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "subway body without knees (2/2)"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "subway calibrates without knees"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "capture floor accepts the floor frame"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "15.6 fps sample counts"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "fruit blade at 15.6 fps"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "ZONE lane mode by default"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "zone dwell 3 samples"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "calibration thigh >= torso/2"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "zone mode recalibrates after a scale change"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "crouch without a thigh baseline"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "shoulder crouch line"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "shoulder crouch rule"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "crouch first; no scale reset while ducking"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "calibrate upright only"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "retire the torso-drop crouch"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "hold counter"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "hold crouch and lane through brief body rejects"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track soft-reject state"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "soft reject helper and counters"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "soft reject decision"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "crouch-tolerant geometry"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "crouch-tolerant continuity"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "accepted sample clears the soft run"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "soft-rejected sample is dropped"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "POSEDBG shoulder line and break causes"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "crouch hips: fill one, soft-skip both"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "faster lane zones"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "side-lane lean in pose_input body()"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary flag in the source"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary service state"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary words readable"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary capability"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary helpers"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read start"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary skips the scan"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector continuity"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector loss window"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "62 fps track soft rejects"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "62 fps subway hold samples"
+      }
+    ],
+    "POSEVIEW": [
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "box continuity tolerance"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "detector continuity tolerates skipped frames"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "hold ROI through 7 missed detections (standalone LOST_LIMIT 8)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (1/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "declare source/service before display_pose (2/2)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "draw decoded pose while the ROI is alive"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track break does not blank the display"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "confirm_track age windows 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "knees optional for tracking (duck still needs them)"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "track continuity tolerates skipped frames"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "only a lost detection ends the track"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "step age window 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "debug line shows ROI hold count"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "pose_input stale window 300 ms"
+      },
+      {
+        "file": "game_pose_service.c",
+        "patch": "capture floor accepts the floor frame"
+      },
+      {
+        "file": "pose_input.c",
+        "patch": "15.6 fps sample counts"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary flag in the source"
+      },
+      {
+        "file": "pose_service.h",
+        "patch": "kp summary service state"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary words readable"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "kp summary capability"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary helpers"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read start"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary read"
+      },
+      {
+        "file": "pose_service.c",
+        "patch": "kp summary skips the scan"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector continuity"
+      },
+      {
+        "file": "pose_mmio_source.c",
+        "patch": "62 fps detector loss window"
+      }
+    ]
+  },
+  "replaced": {
+    "FRUIT/POSE.BIN": {
+      "old": "7d138f9a5dfeed780b618b5d620757ebced2616b1c10eb1820cbf30a2d1b76af",
+      "new": "7f473d6b57ae153bf7afe2dc9e6df40db7ab1994c3405d5ab527411226b2ba26"
+    },
+    "FRUIT/POSE.MAN": {
+      "old": "d1c93d2bd0df3e1848fc2a58ee53bf9eb436afa0a98a347078c6e5ac59cc2eed",
+      "new": "2f0aaf31610942baaf67bcd87ba14a54c0f53c7f8c3a7bd6571718165e33a130"
+    },
+    "SUBWAY/POSE.BIN": {
+      "old": "4f0ba05f082a6a81ac5ed5ba2de4519bdc1419d7a51753751e1110485ff4a636",
+      "new": "f79d2f2a204d42a2e9a09fbf65a99442e6eb61cbc1adb978355e8b1fa4a0fa2c"
+    },
+    "SUBWAY/POSE.MAN": {
+      "old": "4de7c83486539b1c45c77fd527976ec08179589b4366a483b1e035da4e4954fa",
+      "new": "adc847a33fc196803a50a5cd6c41624d7299eb99523fb4ef76a5ae28bae65823"
+    },
+    "POSEVIEW/GAME.BIN": {
+      "old": "25ad7656d05ae6168b60d57ac35d285f41e214aa9a4ecb64cf8ef7f21f0dc201",
+      "new": "3ab5d59887ad9e2fe32c77bb328eb593dbdc7849b6fe3683e6a1b3a2e9d1845c"
+    },
+    "POSEVIEW/MANIFEST.BIN": {
+      "old": "b664a57617c3c890accd161354df6406eb6e72db0f9dd84b71c681f5879338a3",
+      "new": "2dfa756dbe216a6628dd7b741eff0f627cf29b7cc11dd9206e3efbac9e062202"
+    }
+  },
+  "boot_rom_identical_to_build_144_run01": true,
+  "packages": {
+    "GAMES/DOOM/DOOM1.WAD": "1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771",
+    "GAMES/DOOM/GAME.BIN": "c2802fd71ee0fc0bdce5be341878b80d29013c53747598d0cb6addcad28246cd",
+    "GAMES/DOOM/MANIFEST.BIN": "0ae819d56186a207c8a281c87dfd3b26a3e68a559e8471387ff96049941d9957",
+    "GAMES/FRUIT/GAME.BIN": "83d90d73542a0a493f651f60381e72178c3d3e91a0e1d59457f7c60417ec724b",
+    "GAMES/FRUIT/MANIFEST.BIN": "1af3565ee44d47595befab5052457551beab12d00e15fc393307e738e88f3a87",
+    "GAMES/FRUIT/PALETTE.BIN": "68b90171c65dd34c5c5b10290e1a8da29b24e7bb7d75e56dd955e524b93105de",
+    "GAMES/FRUIT/POSE.BIN": "7f473d6b57ae153bf7afe2dc9e6df40db7ab1994c3405d5ab527411226b2ba26",
+    "GAMES/FRUIT/POSE.MAN": "2f0aaf31610942baaf67bcd87ba14a54c0f53c7f8c3a7bd6571718165e33a130",
+    "GAMES/FRUIT/SPRITES.BIN": "4dc04e7b5365adee5c659fae4d70d2921b96ee4bbce4c9efaefd35df0eba8176",
+    "GAMES/FRUIT/TOUCH.BIN": "d79216f075d6e12f829bdef145411e81f8ecdb7cc6a7c806a17694a591114c3a",
+    "GAMES/FRUIT/TOUCH.MAN": "c280c93654dfb72aaa31bc158dbd42f5807e48280d0680980b74a86314a3ee5a",
+    "GAMES/PAL/ABC.MKF": "ef2920716b87b5bd0ecb184cbbcf8585512184bc0cbe4dfff07f8a4617f2af0b",
+    "GAMES/PAL/BALL.MKF": "be8e7218ee21baf64eaa90ec9f27967544a1b0136ce490604ac5f6dedb22830b",
+    "GAMES/PAL/DATA.MKF": "d9e82696a42d93f9623c63714a68a12645c7d650776eaa8510ec27b7c35e819a",
+    "GAMES/PAL/F.MKF": "6fc9a9978dd06bee8e381c80e68683b6f3033c2aa40f61eb0e1a2194fc570f65",
+    "GAMES/PAL/FANTI.FON": "2631bfa2b70333ad85d6e32edf7dedb5e888a3d34ee31f0f2da3f7d8599cd5e3",
+    "GAMES/PAL/FBP.MKF": "f38d0243a4f635886f27324c2a44016e7ff46db2146c853ab8edda12b8d5652c",
+    "GAMES/PAL/FIRE.MKF": "eab713c53b4236f4aeefd30239675d62e887f10bb576ce1950a5be5b0d7458dd",
+    "GAMES/PAL/GAME.BIN": "18f75e809ccae318c471cc0432696bfb434332688e2ce6940832fd3d71e4f58f",
+    "GAMES/PAL/GOP.MKF": "dbb17aeb8fcef6e24232b05abb58d5e9acf06a868b73bc0dc6c9a9e955fffb9c",
+    "GAMES/PAL/M.MSG": "f6480a5095e8cc358ecb3e8329ca80996c6068c34327f2f86ec03375ad40b654",
+    "GAMES/PAL/MANIFEST.BIN": "908cb4d5a3e519bc0176bfd7a58b537e3c4490c3249fb49da1b5dab7af600a08",
+    "GAMES/PAL/MAP.MKF": "a40f22319d70a97a8871dfc85494c2d28e793c1e10d752734ab8f61704355066",
+    "GAMES/PAL/MGO.MKF": "a9f9fc0ceeccb354906a96eaf6003f9c7ece8db6789856144201d926f5ff76b1",
+    "GAMES/PAL/MIDI.MKF": "70587d762bdcea0a6e07f0f13808993045a6f382c713f0ad81793a7f6991f913",
+    "GAMES/PAL/MUS.MKF": "8367c9d34331f67b20b12380e809a38d3313cae199f260d272d07fcf55e11a21",
+    "GAMES/PAL/PAT.MKF": "78b08ef4c4630b703c714da25ab6482d4524a577c56c9554a369bbf30cc67eab",
+    "GAMES/PAL/RGM.MKF": "fbeb7cbafd374af8c07088ab18996edcadd6ec52b8bb0a0af644c2cee4e26bac",
+    "GAMES/PAL/RNG.MKF": "226a7932b94548071ecfb6274ac069f890ea347aef99c79c72b69655457310a3",
+    "GAMES/PAL/SSS.MKF": "8ebbbcfa5bdae5fe6b73752e3a6e6d3fd28d6fa857ffefcb6c8c0242eaf0252c",
+    "GAMES/PAL/VOC.MKF": "c6e14eaaff50979df269b7d6d5f7401cb354be38e3ad737e4ca3ec473c1c5ab3",
+    "GAMES/PAL/WOR16.ASC": "d28985aee96b96981be1542172f6f32509541dec325163e857cd677f56dad8f9",
+    "GAMES/PAL/WOR16.FON": "c862b8f587b246195fac3c8c3ecf8d00ddb7b10aed6bad4c8b3c5b3fa46f5d83",
+    "GAMES/PAL/WORD.DAT": "856fd6649a3e5bf143af30281eb33b2c67b1f6776290ce9650b065b1f78f49bb",
+    "GAMES/POSEVIEW/GAME.BIN": "3ab5d59887ad9e2fe32c77bb328eb593dbdc7849b6fe3683e6a1b3a2e9d1845c",
+    "GAMES/POSEVIEW/MANIFEST.BIN": "2dfa756dbe216a6628dd7b741eff0f627cf29b7cc11dd9206e3efbac9e062202",
+    "GAMES/SLUG/A000.BIN": "35355d917b68effe548e18f35eab9e0fed1d59bb947fd758c85237c9a027b099",
+    "GAMES/SLUG/A001.BIN": "84a90d2614380bb370e1e66fe562434b38d55a9b7601fed89c3b60c779afd2fa",
+    "GAMES/SLUG/A002.BIN": "4d915661fa47e60ba021fa44031d8bd41e7b156373059c00f3efe9b68a769507",
+    "GAMES/SLUG/A003.BIN": "542f7130098220e0fd13264501d8a21f52859d223a8287c3a840d157a856f759",
+    "GAMES/SLUG/A004.BIN": "cf838ba7e07ee1a80558296382eb316493bec6ceb485fdcfc85ee6e98dfe6366",
+    "GAMES/SLUG/A005.BIN": "f3dd8f135892358a4c531a05f88a6c6abfa0875e1f2346c11b7efdfb17a104a2",
+    "GAMES/SLUG/A006.BIN": "a985ffb25e2dc81245ed60e9eeef79eb87231413caee7c0f8752e4f7f77739a1",
+    "GAMES/SLUG/A007.BIN": "7543e2b5f66cb8efc71210e37221b19007ae6379ab29be2fc15780db7879ebc3",
+    "GAMES/SLUG/A008.BIN": "3415393537a1ebac0fdfba1ed97aee6e078dd9ec720f66bfe45f9f6e77bac33a",
+    "GAMES/SLUG/A009.BIN": "deac16685cf004590d6f457148ae7246f27bc5f20ec2b0f5a23df0f280bcbac4",
+    "GAMES/SLUG/A010.BIN": "1a75fc8ff0240129a40beed9aeb1a46b974d8c23010031319a6a83a6ca6f8e5a",
+    "GAMES/SLUG/A011.BIN": "2621a51a30ff6d0f9b627678248c8f27598afa124998e043e29d7ef6d0b22dac",
+    "GAMES/SLUG/A012.BIN": "1104723693102fc520ab4a21bfd0f694eb71cd1399c7339694faf22c6631989b",
+    "GAMES/SLUG/A013.BIN": "f40e7c9ec070383e4486d57f879acab194a47f4ae57cec625f15ff590bdc715b",
+    "GAMES/SLUG/A014.BIN": "4bc569a1a8ec2ad34760dbc0aadd1fac8ce208fc8fd9abc9ba0dfe7f1946a91e",
+    "GAMES/SLUG/A015.BIN": "889ac8f2981383630ce20ece42b99c6fd302284e4bbd6251fe8817cc416502f2",
+    "GAMES/SLUG/A016.BIN": "ce3a9d9d14e838e116c249f940ac1ac5b0bacef853ee6e0b5f2818e4b661fa39",
+    "GAMES/SLUG/A017.BIN": "e18dc3b01ed5b85d2572ab8c4bb8325aed1b122e2c92124d72511d63348692a4",
+    "GAMES/SLUG/A018.BIN": "1ed93e0cbfe3d76b15cd199885dc0d634bcf523740d10c3b74175a7cde6e02db",
+    "GAMES/SLUG/A019.BIN": "5d3a21295c1081bc3f1e0899b658fa4160106c0f02bb630c7076be6548d24b27",
+    "GAMES/SLUG/GAME.BIN": "fab7248c9938d456fc0d17a68aa89d65bcb4afe6d4e5b6b8bc43bc718452699d",
+    "GAMES/SLUG/MANIFEST.BIN": "6e5f865391a3647ff55a47a98dfca667a9d8454d20fba57e9a47fba616415f06",
+    "GAMES/SUBWAY/GAME.BIN": "b8a803268756f6e14bf82e9ff4f98cb8b775a8f278f7964e3fb93147778a5573",
+    "GAMES/SUBWAY/MANIFEST.BIN": "0ce9b62b2ccbdfd078dda00b24cde0f03cd9dc94256b58379795b2a7b77e7a09",
+    "GAMES/SUBWAY/PALETTE.BIN": "bb52b0c0093dd91735942ee918998ee2032ce740b12cecf5b4047f157aee43ca",
+    "GAMES/SUBWAY/POSE.BIN": "f79d2f2a204d42a2e9a09fbf65a99442e6eb61cbc1adb978355e8b1fa4a0fa2c",
+    "GAMES/SUBWAY/POSE.MAN": "adc847a33fc196803a50a5cd6c41624d7299eb99523fb4ef76a5ae28bae65823",
+    "GAMES/SUBWAY/SPRITES.BIN": "26780d3840d46983255140db4e753a2fcbe1182c8bb78cde2e2f2ee6bd44438e",
+    "GAMES/SUBWAY/TOUCH.BIN": "83c9f3b52c6cc2b12558e1f8ae37669fc9489bda9499c0534d27b479b07d2dd2",
+    "GAMES/SUBWAY/TOUCH.MAN": "cb1fbdca339192fee698388ea47a729c76dc041027c36657f336b32f02ee1917",
+    "MODECAP.JSON": "b5b109c9d6ddba738a795ae86109578b1151e23c676dcea6ba42a6d8441e10d1"
+  },
+  "physical_SD_written": false,
+  "builder": {
+    "script": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\tools\\build_pose_r72_games.py",
+    "reproduces": "E:\\Codex_workplace\\nes_fusion_20261014\\tools\\build_subway_shoulder_duck.py (run08 composition)",
+    "r72_patches": {
+      "FRUIT": [
+        "kp summary flag in the source",
+        "kp summary service state",
+        "kp summary words readable",
+        "kp summary capability",
+        "kp summary helpers",
+        "kp summary read start",
+        "kp summary read",
+        "kp summary skips the scan",
+        "62 fps detector continuity",
+        "62 fps detector loss window"
+      ],
+      "SUBWAY": [
+        "kp summary flag in the source",
+        "kp summary service state",
+        "kp summary words readable",
+        "kp summary capability",
+        "kp summary helpers",
+        "kp summary read start",
+        "kp summary read",
+        "kp summary skips the scan",
+        "62 fps detector continuity",
+        "62 fps detector loss window",
+        "62 fps track soft rejects",
+        "62 fps subway hold samples"
+      ],
+      "POSEVIEW": [
+        "kp summary flag in the source",
+        "kp summary service state",
+        "kp summary words readable",
+        "kp summary capability",
+        "kp summary helpers",
+        "kp summary read start",
+        "kp summary read",
+        "kp summary skips the scan",
+        "62 fps detector continuity",
+        "62 fps detector loss window"
+      ]
+    },
+    "banner": "O2 CPU 157.5MHZ",
+    "boot_ROM_compared_with": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\firmware_o2_view\\build_run03\\program.hex"
+  },
+  "clock_wrapper": {
+    "script": "E:\\Codex_workplace\\cpu_pose_touch_fusion_20261008\\tools\\build_pose_r74_games.py",
+    "HZ": 157500000
+  }
+}

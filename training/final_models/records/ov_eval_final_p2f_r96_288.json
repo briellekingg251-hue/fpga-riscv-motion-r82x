@@ -1,0 +1,126 @@
+{
+ "tests": [
+  "body_20261003_200751_251287",
+  "body_20261003_201325_425012",
+  "body_20261003_201747_114879",
+  "body_20261003_202301_327304"
+ ],
+ "frames": 1622,
+ "det": "../runs/d1_ov_teacher/export_pow2u",
+ "det_misses": 0,
+ "thr": 0.2,
+ "models": {
+  "p2f_r96_288_int8": {
+   "gtbox": {
+    "groups": {
+     "shoulder": 1.0,
+     "elbow": 0.9855,
+     "wrist": 0.9608,
+     "hip": 0.9852,
+     "knee": 0.9676,
+     "ankle": 0.9612
+    },
+    "joints": {
+     "Lsho": 1.0,
+     "Rsho": 1.0,
+     "Lelb": 0.9883,
+     "Relb": 0.9827,
+     "Lwri": 0.9611,
+     "Rwri": 0.9605,
+     "Lhip": 0.9846,
+     "Rhip": 0.9858,
+     "Lkne": 0.9692,
+     "Rkne": 0.9661,
+     "Lank": 0.9661,
+     "Rank": 0.9562
+    },
+    "mean": 0.9767,
+    "n": 1622
+   },
+   "e2e": {
+    "groups": {
+     "shoulder": 0.9994,
+     "elbow": 0.9846,
+     "wrist": 0.9556,
+     "hip": 0.9877,
+     "knee": 0.9713,
+     "ankle": 0.9658
+    },
+    "joints": {
+     "Lsho": 0.9988,
+     "Rsho": 1.0,
+     "Lelb": 0.9864,
+     "Relb": 0.9827,
+     "Lwri": 0.9556,
+     "Rwri": 0.9556,
+     "Lhip": 0.9883,
+     "Rhip": 0.9871,
+     "Lkne": 0.9692,
+     "Rkne": 0.9735,
+     "Lank": 0.9649,
+     "Rank": 0.9667
+    },
+    "mean": 0.9774,
+    "n": 1622
+   }
+  },
+  "p2f_r96_288_float": {
+   "gtbox": {
+    "groups": {
+     "shoulder": 1.0,
+     "elbow": 0.9867,
+     "wrist": 0.9617,
+     "hip": 0.983,
+     "knee": 0.9692,
+     "ankle": 0.9624
+    },
+    "joints": {
+     "Lsho": 1.0,
+     "Rsho": 1.0,
+     "Lelb": 0.9901,
+     "Relb": 0.9834,
+     "Lwri": 0.9636,
+     "Rwri": 0.9599,
+     "Lhip": 0.9803,
+     "Rhip": 0.9858,
+     "Lkne": 0.9716,
+     "Rkne": 0.9667,
+     "Lank": 0.9636,
+     "Rank": 0.9612
+    },
+    "mean": 0.9772,
+    "n": 1622
+   },
+   "e2e": {
+    "groups": {
+     "shoulder": 0.9991,
+     "elbow": 0.9849,
+     "wrist": 0.9617,
+     "hip": 0.9898,
+     "knee": 0.9738,
+     "ankle": 0.9676
+    },
+    "joints": {
+     "Lsho": 0.9982,
+     "Rsho": 1.0,
+     "Lelb": 0.9889,
+     "Relb": 0.9809,
+     "Lwri": 0.9642,
+     "Rwri": 0.9593,
+     "Lhip": 0.9914,
+     "Rhip": 0.9883,
+     "Lkne": 0.971,
+     "Rkne": 0.9766,
+     "Lank": 0.9642,
+     "Rank": 0.971
+    },
+    "mean": 0.9795,
+    "n": 1622
+   }
+  }
+ },
+ "paths": {
+  "p2f_r96_288_int8": "../runs/p2f_r96_288_ft/export_pow2u",
+  "p2f_r96_288_float": "../runs/p2f_r96_288_ft/last.pt"
+ }
+}
